@@ -15,12 +15,12 @@ Este projeto realiza o download automático dos **Anexos I e II** em formato PDF
 
 - Python 3.x instalado.
 
-# Crie um ambiente virtual e ative-o
+### Crie um ambiente virtual e ative-o
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate   # Windows
 
-# Instale as dependências
+### Instale as dependências
 
 ```
 cd 1_TESTE_WEB_SCRAPING
@@ -35,7 +35,7 @@ cd src
 pip install -r requirements.txt
 ```
 
-# Depois de baixar as depêndencias, execute:
+### Depois de baixar as depêndencias, execute:
 
 ```
 python scraping.py
