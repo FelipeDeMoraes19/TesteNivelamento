@@ -16,9 +16,12 @@ Este projeto realiza o download automático dos **Anexos I e II** em formato PDF
 - Python 3.x instalado.
 
 ### Crie um ambiente virtual e ative-o
+
+```
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate   # Windows
+```
 
 ### Instale as dependências
 
