@@ -24,6 +24,8 @@ docker-compose up -d
 psql -h localhost -U teste -d ansdb
 ```
 
+- *senha: teste*
+
 ## Execução das queries:
 ```sql
 -- Criar tabelas

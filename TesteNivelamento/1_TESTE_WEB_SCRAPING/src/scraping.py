@@ -36,7 +36,7 @@ def baixar_pdfs(links):
             link = future_to_link[future]
             try:
                 arquivo = future.result()
-                print(f"✅ Download concluído: {link}")
+                print(f" Download concluído: {link}")
                 arquivos_baixados.append(arquivo)
             except Exception as e:
                 print(f"❌ Falha ao baixar {link}: {e}")
@@ -47,22 +47,22 @@ def compactar_arquivos(arquivos, destino_zip):
     with ZipFile(destino_zip, 'w') as zipf:
         for arquivo in arquivos:
             zipf.write(arquivo, arcname=os.path.basename(arquivo))
-    print(f"\n✅ Arquivos compactados com sucesso em: {destino_zip}")
+    print(f"\n Arquivos compactados com sucesso em: {destino_zip}")
 
 def testes_adicionais(arquivos, zip_path):
-    print("\n🧪 Executando testes adicionais...")
+    print("\n Executando testes adicionais...")
     assert len(arquivos) == 2, "Número de arquivos baixados incorreto."
     assert all(os.path.exists(arq) for arq in arquivos), "Arquivos baixados não encontrados."
     assert os.path.exists(zip_path), "Arquivo compactado não encontrado."
-    print("✅ Todos os testes passaram com sucesso!")
+    print(" Todos os testes passaram com sucesso!")
 
 def main():
     criar_diretorios()
 
-    print("📥 Iniciando download dos PDFs...")
+    print(" Iniciando download dos PDFs...")
     arquivos = baixar_pdfs(LINKS_ANEXOS)
 
-    print("\n🗜️ Compactando PDFs baixados...")
+    print("\n Compactando PDFs baixados...")
     compactar_arquivos(arquivos, ZIP_PATH)
 
     testes_adicionais(arquivos, ZIP_PATH)

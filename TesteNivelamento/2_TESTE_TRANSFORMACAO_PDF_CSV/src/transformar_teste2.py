@@ -40,32 +40,32 @@ def tratar_dados(dados_brutos):
 
 def salvar_csv(df, csv_path):
     df.to_csv(csv_path, index=False)
-    print(f"✅ Arquivo CSV salvo em: {csv_path}")
+    print(f" Arquivo CSV salvo em: {csv_path}")
 
 def compactar_csv(csv_path, zip_path):
     """Compacta o CSV gerado em um arquivo ZIP."""
     with ZipFile(zip_path, 'w') as zipf:
         zipf.write(csv_path, arcname=os.path.basename(csv_path))
-    print(f"✅ CSV compactado com sucesso em: {zip_path}")
+    print(f" CSV compactado com sucesso em: {zip_path}")
 
 def testes_adicionais(df, csv_path, zip_path):
-    print("\n🧪 Executando testes adicionais...")
+    print("\n Executando testes adicionais...")
     assert not df.empty, "O DataFrame está vazio."
     assert os.path.exists(csv_path), "CSV não encontrado após salvar."
     assert os.path.exists(zip_path), "ZIP não encontrado após compactação."
-    print("✅ Todos os testes adicionais passaram com sucesso!")
+    print(" Todos os testes passaram com sucesso!")
 
 def main():
     try:
         criar_diretorios()
 
-        print("📑 Extraindo dados do PDF com paralelismo...")
+        print(" Extraindo dados do PDF com paralelismo...")
         dados_brutos = extrair_tabelas_do_pdf(PDF_PATH)
 
-        print("🔄 Tratando os dados extraídos...")
+        print(" Tratando os dados extraídos...")
         df = tratar_dados(dados_brutos)
 
-        print("💾 Salvando dados em CSV...")
+        print(" Salvando dados em CSV...")
         salvar_csv(df, CSV_PATH)
 
         print("🗜️ Compactando CSV...")
