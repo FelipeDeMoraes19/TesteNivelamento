@@ -1,4 +1,4 @@
-# Teste 2: Transformação PDF para CSV 🔄
+# Teste 2: Transformação PDF para CSV 
 
 Extrai tabelas de um arquivo PDF da ANS, salva como CSV e compacta em ZIP.
 

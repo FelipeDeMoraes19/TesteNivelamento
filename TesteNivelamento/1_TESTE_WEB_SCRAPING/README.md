@@ -1,4 +1,4 @@
-# Teste 1: Web Scraping 📥
+# Teste 1: Web Scraping 
 
 Realiza o download automático dos **Anexos I e II** (PDF) diretamente do site da ANS e compacta em ZIP.
 

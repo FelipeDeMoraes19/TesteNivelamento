@@ -1,4 +1,4 @@
-# Teste 3: Banco de Dados 🗃️
+# Teste 3: Banco de Dados 
 
 Criação e consulta analítica em banco PostgreSQL.
 
