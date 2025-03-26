@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  transformar_dados:
+    build: ./src
+    container_name: transformar_dados_container
+    volumes:
+      - ../downloads:/downloads
+      - ../dados_csv:/dados_csv
+      - ../compactado:/compactado
+    restart: "no"

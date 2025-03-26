@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  scraping_ans:
+    build: ./src
+    container_name: scraping_ans_container
+    volumes:
+      - ../downloads:/downloads
+      - ../compactado:/compactado
+    restart: "no"
